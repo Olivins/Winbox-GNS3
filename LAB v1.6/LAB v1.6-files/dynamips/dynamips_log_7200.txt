@@ -26,3 +26,14 @@ Sep 28 15:13:30.169 HYPERVISOR: exec_cmd: nio create_udp_auto nio_udp_auto3 127.
 Sep 28 15:13:30.181 HYPERVISOR: exec_cmd: nio connect_udp_auto nio_udp_auto3 127.0.0.1 40009 
 Sep 28 15:13:30.182 HYPERVISOR: exec_cmd: ethsw add_nio SW1 nio_udp_auto3 
 Sep 28 15:13:30.195 HYPERVISOR: exec_cmd: ethsw set_access_port SW1 nio_udp_auto3 1 
+Sep 28 15:39:16.865 HYPERVISOR: exec_cmd: nio create_udp_auto nio_udp_auto4 127.0.0.1 10001 20000 
+Sep 28 15:39:16.878 HYPERVISOR: exec_cmd: nio connect_udp_auto nio_udp_auto4 127.0.0.1 40014 
+Sep 28 15:39:16.879 HYPERVISOR: exec_cmd: ethsw add_nio SW1 nio_udp_auto4 
+Sep 28 15:39:16.891 HYPERVISOR: exec_cmd: ethsw set_access_port SW1 nio_udp_auto4 1 
+Sep 28 15:40:54.210 HYPERVISOR: exec_cmd: ethsw remove_nio SW1 nio_udp_auto4 
+Sep 28 15:40:54.218 HYPERVISOR: exec_cmd: nio delete nio_udp_auto4 
+Sep 28 15:40:57.081 HYPERVISOR: exec_cmd: ethsw remove_nio SW1 nio_udp_auto1 
+Sep 28 15:40:57.093 HYPERVISOR: exec_cmd: nio delete nio_udp_auto1 
+Sep 28 15:40:59.048 HYPERVISOR: exec_cmd: ethsw remove_nio SW1 nio_udp_auto3 
+Sep 28 15:40:59.064 HYPERVISOR: exec_cmd: nio delete nio_udp_auto3 
+Sep 28 15:51:13.478 HYPERVISOR: exec_cmd: hypervisor stop 
