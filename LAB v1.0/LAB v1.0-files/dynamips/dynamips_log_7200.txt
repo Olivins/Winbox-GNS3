@@ -12,3 +12,4 @@ Sep 28 11:12:35.975 HYPERVISOR: exec_cmd: ethsw set_access_port SW1 nio_udp_auto
 Sep 28 11:12:57.445 HYPERVISOR: exec_cmd: nio create_gen_eth nio_gen_eth0 \Device\NPF_{C80F538B-0430-4F4C-A0E2-5C3F1EB2BD35} 
 Sep 28 11:12:57.570 HYPERVISOR: exec_cmd: ethsw add_nio SW1 nio_gen_eth0 
 Sep 28 11:12:57.601 HYPERVISOR: exec_cmd: ethsw set_access_port SW1 nio_gen_eth0 1 
+Sep 28 13:17:43.348 HYPERVISOR: exec_cmd: hypervisor stop 
