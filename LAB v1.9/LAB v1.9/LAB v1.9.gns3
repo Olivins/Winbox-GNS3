@@ -1,0 +1,475 @@
+{
+    "auto_start": false, 
+    "name": "LAB v1.9", 
+    "resources_type": "local", 
+    "topology": {
+        "ellipses": [
+            {
+                "border_style": 2, 
+                "height": 3.0, 
+                "width": 325.0, 
+                "x": -104.0, 
+                "y": 115.0
+            }
+        ], 
+        "links": [
+            {
+                "description": "Link from Cloud 2 port nio_gen_eth:loopback to POP-1 port Ethernet0", 
+                "destination_node_id": 2, 
+                "destination_port_id": 3, 
+                "id": 1, 
+                "source_node_id": 1, 
+                "source_port_id": 1
+            }, 
+            {
+                "description": "Link from POP-1 port Ethernet0 to Cloud 2 port nio_gen_eth:loopback", 
+                "destination_node_id": 1, 
+                "destination_port_id": 1, 
+                "id": 2, 
+                "source_node_id": 2, 
+                "source_port_id": 3
+            }, 
+            {
+                "description": "Link from Cloud 2 port nio_gen_eth:loopback to POP-1 port Ethernet0", 
+                "destination_node_id": 2, 
+                "destination_port_id": 3, 
+                "id": 3, 
+                "source_node_id": 1, 
+                "source_port_id": 1
+            }, 
+            {
+                "description": "Link from Cloud 3 port nio_gen_eth:loopback to POP-1 port Ethernet0", 
+                "destination_node_id": 2, 
+                "destination_port_id": 3, 
+                "id": 4, 
+                "source_node_id": 5, 
+                "source_port_id": 20
+            }, 
+            {
+                "description": "Link from Cloud 3 port nio_gen_eth:loopback to RB-01 port Ethernet0", 
+                "destination_node_id": 6, 
+                "destination_port_id": 22, 
+                "id": 5, 
+                "source_node_id": 5, 
+                "source_port_id": 20
+            }, 
+            {
+                "description": "Link from Cloud 3 port nio_gen_eth:loopback to SW1 port 1", 
+                "destination_node_id": 7, 
+                "destination_port_id": 27, 
+                "id": 6, 
+                "source_node_id": 5, 
+                "source_port_id": 20
+            }, 
+            {
+                "description": "Link from SW1 port 2 to RB-01 port Ethernet0", 
+                "destination_node_id": 6, 
+                "destination_port_id": 22, 
+                "id": 7, 
+                "source_node_id": 7, 
+                "source_port_id": 28
+            }, 
+            {
+                "description": "Link from RB-01 port Ethernet1 to RB-02 port Ethernet1", 
+                "destination_node_id": 3, 
+                "destination_port_id": 10, 
+                "id": 8, 
+                "source_node_id": 6, 
+                "source_port_id": 23
+            }, 
+            {
+                "description": "Link from RB-03 port Ethernet1 to RB-01 port Ethernet2", 
+                "destination_node_id": 6, 
+                "destination_port_id": 24, 
+                "id": 11, 
+                "source_node_id": 4, 
+                "source_port_id": 16
+            }
+        ], 
+        "nodes": [
+            {
+                "default_symbol": ":/symbols/router.normal.svg", 
+                "description": "QEMU VM", 
+                "hover_symbol": ":/symbols/router.selected.svg", 
+                "id": 3, 
+                "label": {
+                    "color": "#000000", 
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0", 
+                    "text": "RB-02", 
+                    "x": 9.5, 
+                    "y": -25.0
+                }, 
+                "ports": [
+                    {
+                        "id": 9, 
+                        "name": "Ethernet0", 
+                        "port_number": 0
+                    }, 
+                    {
+                        "description": "connected to RB-01 on port Ethernet1", 
+                        "id": 10, 
+                        "link_id": 8, 
+                        "name": "Ethernet1", 
+                        "nio": "NIO_UDP", 
+                        "port_number": 1
+                    }, 
+                    {
+                        "id": 11, 
+                        "name": "Ethernet2", 
+                        "port_number": 2
+                    }, 
+                    {
+                        "id": 12, 
+                        "name": "Ethernet3", 
+                        "port_number": 3
+                    }, 
+                    {
+                        "id": 13, 
+                        "name": "Ethernet4", 
+                        "port_number": 4
+                    }
+                ], 
+                "properties": {
+                    "adapters": 5, 
+                    "console": 5002, 
+                    "hda_disk_image": "C:/Users/noc/GNS3/images/QEMU/routeros.img", 
+                    "monitor": 5502, 
+                    "name": "RB-02", 
+                    "qemu_path": "C:\\Program Files\\GNS3\\qemu-2.1.0\\qemu-system-x86_64w.exe", 
+                    "ram": 64
+                }, 
+                "qemu_id": 2, 
+                "server_id": 1, 
+                "type": "QemuVM", 
+                "x": -290.0, 
+                "y": 97.0
+            }, 
+            {
+                "default_symbol": ":/symbols/router.normal.svg", 
+                "description": "QEMU VM", 
+                "hover_symbol": ":/symbols/router.selected.svg", 
+                "id": 4, 
+                "label": {
+                    "color": "#000000", 
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0", 
+                    "text": "RB-03", 
+                    "x": 9.5, 
+                    "y": -25.0
+                }, 
+                "ports": [
+                    {
+                        "id": 15, 
+                        "name": "Ethernet0", 
+                        "port_number": 0
+                    }, 
+                    {
+                        "description": "connected to RB-01 on port Ethernet2", 
+                        "id": 16, 
+                        "link_id": 11, 
+                        "name": "Ethernet1", 
+                        "nio": "NIO_UDP", 
+                        "port_number": 1
+                    }, 
+                    {
+                        "id": 17, 
+                        "name": "Ethernet2", 
+                        "port_number": 2
+                    }, 
+                    {
+                        "id": 18, 
+                        "name": "Ethernet3", 
+                        "port_number": 3
+                    }, 
+                    {
+                        "id": 19, 
+                        "name": "Ethernet4", 
+                        "port_number": 4
+                    }
+                ], 
+                "properties": {
+                    "adapters": 5, 
+                    "console": 5003, 
+                    "hda_disk_image": "C:/Users/noc/GNS3/images/QEMU/routeros.img", 
+                    "monitor": 5503, 
+                    "name": "RB-03", 
+                    "qemu_path": "C:\\Program Files\\GNS3\\qemu-2.1.0\\qemu-system-x86_64w.exe", 
+                    "ram": 64
+                }, 
+                "qemu_id": 3, 
+                "server_id": 1, 
+                "type": "QemuVM", 
+                "x": 351.0, 
+                "y": 98.0
+            }, 
+            {
+                "description": "Cloud", 
+                "id": 5, 
+                "label": {
+                    "color": "#000000", 
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0", 
+                    "text": "Cloud 3", 
+                    "x": 52.0, 
+                    "y": -25.0
+                }, 
+                "ports": [
+                    {
+                        "description": "connected to SW1 on port 1", 
+                        "id": 20, 
+                        "link_id": 6, 
+                        "name": "nio_gen_eth:loopback", 
+                        "nio": "NIO_Generic_Ethernet", 
+                        "stub": true
+                    }
+                ], 
+                "properties": {
+                    "name": "Cloud 3", 
+                    "nios": [
+                        "nio_gen_eth:loopback"
+                    ]
+                }, 
+                "server_id": 1, 
+                "type": "Cloud", 
+                "x": -532.5, 
+                "y": -243.0
+            }, 
+            {
+                "default_symbol": ":/symbols/router.normal.svg", 
+                "description": "QEMU VM", 
+                "hover_symbol": ":/symbols/router.selected.svg", 
+                "id": 6, 
+                "label": {
+                    "color": "#000000", 
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0", 
+                    "text": "RB-01", 
+                    "x": 9.5, 
+                    "y": -25.0
+                }, 
+                "ports": [
+                    {
+                        "description": "connected to SW1 on port 2", 
+                        "id": 22, 
+                        "link_id": 7, 
+                        "name": "Ethernet0", 
+                        "nio": "NIO_UDP", 
+                        "port_number": 0
+                    }, 
+                    {
+                        "description": "connected to RB-02 on port Ethernet1", 
+                        "id": 23, 
+                        "link_id": 8, 
+                        "name": "Ethernet1", 
+                        "nio": "NIO_UDP", 
+                        "port_number": 1
+                    }, 
+                    {
+                        "description": "connected to RB-03 on port Ethernet1", 
+                        "id": 24, 
+                        "link_id": 11, 
+                        "name": "Ethernet2", 
+                        "nio": "NIO_UDP", 
+                        "port_number": 2
+                    }, 
+                    {
+                        "id": 25, 
+                        "name": "Ethernet3", 
+                        "port_number": 3
+                    }, 
+                    {
+                        "id": 26, 
+                        "name": "Ethernet4", 
+                        "port_number": 4
+                    }
+                ], 
+                "properties": {
+                    "adapters": 5, 
+                    "console": 5001, 
+                    "hda_disk_image": "C:/Users/noc/GNS3/images/QEMU/routeros.img", 
+                    "monitor": 5501, 
+                    "name": "RB-01", 
+                    "qemu_path": "C:\\Program Files\\GNS3\\qemu-2.1.0\\qemu-system-x86_64w.exe", 
+                    "ram": 64
+                }, 
+                "qemu_id": 1, 
+                "server_id": 1, 
+                "type": "QemuVM", 
+                "x": 16.0, 
+                "y": -139.0
+            }, 
+            {
+                "description": "Ethernet switch", 
+                "id": 7, 
+                "label": {
+                    "color": "#000000", 
+                    "font": "TypeWriter,10,-1,5,75,0,0,0,0,0", 
+                    "text": "SW1", 
+                    "x": 17.0, 
+                    "y": -25.0
+                }, 
+                "ports": [
+                    {
+                        "description": "connected to Cloud 3 on port nio_gen_eth:loopback", 
+                        "id": 27, 
+                        "link_id": 6, 
+                        "name": "1", 
+                        "nio": "NIO_Generic_Ethernet", 
+                        "port_number": 1, 
+                        "type": "access", 
+                        "vlan": 1
+                    }, 
+                    {
+                        "description": "connected to RB-01 on port Ethernet0", 
+                        "id": 28, 
+                        "link_id": 7, 
+                        "name": "2", 
+                        "nio": "NIO_UDP", 
+                        "port_number": 2, 
+                        "type": "access", 
+                        "vlan": 1
+                    }, 
+                    {
+                        "id": 29, 
+                        "name": "3", 
+                        "port_number": 3, 
+                        "type": "access", 
+                        "vlan": 1
+                    }, 
+                    {
+                        "id": 30, 
+                        "name": "4", 
+                        "port_number": 4, 
+                        "type": "access", 
+                        "vlan": 1
+                    }, 
+                    {
+                        "id": 31, 
+                        "name": "5", 
+                        "port_number": 5, 
+                        "type": "access", 
+                        "vlan": 1
+                    }, 
+                    {
+                        "id": 32, 
+                        "name": "6", 
+                        "port_number": 6, 
+                        "type": "access", 
+                        "vlan": 1
+                    }, 
+                    {
+                        "id": 33, 
+                        "name": "7", 
+                        "port_number": 7, 
+                        "type": "access", 
+                        "vlan": 1
+                    }, 
+                    {
+                        "id": 34, 
+                        "name": "8", 
+                        "port_number": 8, 
+                        "type": "access", 
+                        "vlan": 1
+                    }
+                ], 
+                "properties": {
+                    "name": "SW1"
+                }, 
+                "server_id": 1, 
+                "type": "EthernetSwitch", 
+                "x": -205.5, 
+                "y": -223.0
+            }
+        ], 
+        "notes": [
+            {
+                "color": "#000000", 
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0", 
+                "text": "ETH2: 175.15.10.1/30", 
+                "x": -147.0, 
+                "y": -127.0
+            }, 
+            {
+                "color": "#000000", 
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0", 
+                "text": "ETH3: 175.15.11.1/30", 
+                "x": 97.0, 
+                "y": -130.0
+            }, 
+            {
+                "color": "#000000", 
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0", 
+                "text": "ETH2: 175.15.10.2/30", 
+                "x": -430.0, 
+                "y": 72.0
+            }, 
+            {
+                "color": "#000000", 
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0", 
+                "text": "ETH2: 175.15.11.2/30", 
+                "x": 343.0, 
+                "y": 42.0
+            }, 
+            {
+                "color": "#000000", 
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0", 
+                "text": "EoIP TUNNEL\nDHCP SERVER\n192.168.2.0/24", 
+                "x": 229.0, 
+                "y": 92.0
+            }, 
+            {
+                "color": "#000000", 
+                "font": "TypeWriter,10,-1,5,75,0,0,0,0,0", 
+                "text": "EoIP TUNNEL\nDHCP CLIENTE", 
+                "x": -210.0, 
+                "y": 96.0
+            }
+        ], 
+        "rectangles": [
+            {
+                "height": 26.0, 
+                "width": 148.0, 
+                "x": -147.0, 
+                "y": -129.0
+            }, 
+            {
+                "height": 26.0, 
+                "width": 148.0, 
+                "x": 96.0, 
+                "y": -131.0
+            }, 
+            {
+                "height": 26.0, 
+                "width": 148.0, 
+                "x": -430.0, 
+                "y": 70.0
+            }, 
+            {
+                "height": 26.0, 
+                "width": 148.0, 
+                "x": 342.0, 
+                "y": 41.0
+            }, 
+            {
+                "height": 57.0, 
+                "width": 112.0, 
+                "x": 226.0, 
+                "y": 92.0
+            }, 
+            {
+                "height": 50.0, 
+                "width": 111.0, 
+                "x": -219.0, 
+                "y": 93.0
+            }
+        ], 
+        "servers": [
+            {
+                "cloud": false, 
+                "host": "127.0.0.1", 
+                "id": 1, 
+                "local": true, 
+                "port": 8000
+            }
+        ]
+    }, 
+    "type": "topology", 
+    "version": "1.2.2"
+}

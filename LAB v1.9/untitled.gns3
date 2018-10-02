@@ -1,0 +1,8 @@
+{
+    "auto_start": false, 
+    "name": "untitled", 
+    "resources_type": "local", 
+    "topology": {}, 
+    "type": "topology", 
+    "version": "1.2.2"
+}
